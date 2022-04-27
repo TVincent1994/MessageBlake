@@ -16,7 +16,7 @@ public class ForgotUserPassword {
         Connection conn;
         
         try{
-            conn = DriverManager.getConnection("jdbc:mysql://instancemtb.cxbxcbrf5emw.us-east-2.rds.amazonaws.com:3306/messagetheblake", "messageRoot", "messageTheBRoot");
+            conn = DriverManager.getConnection("x,x,x,x");
             PreparedStatement st = conn.prepareStatement("SELECT password FROM register WHERE email=?");
             st.setString(1, email);
             ResultSet rs = st.executeQuery();

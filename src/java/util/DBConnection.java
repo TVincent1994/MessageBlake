@@ -8,9 +8,9 @@ public class DBConnection {
     
     public static Connection createConnetion(){
         Connection con = null;
-        String url = "jdbc:mysql://instancemtb.cbvlbcyf5pmu.us-west-2.rds.amazonaws.com:3306/messagetheblake"; //mysql url followed by database name
-        String username = "messageRoot";      // mysql username
-        String password = "messageTheBRoot";   // mysql password
+        String url = "x,x,x,x"; //mysql url followed by database name
+        String username = "xxxxxxx";      // mysql username
+        String password = "xxxxxxxx";   // mysql password
         
         try{
             try{

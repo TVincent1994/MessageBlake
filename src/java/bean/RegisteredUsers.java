@@ -23,8 +23,7 @@ public class RegisteredUsers {
         
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection(
-                    "jdbc:mysql://instancemtb.cbvlbcyf5pmu.us-west-2.rds.amazonaws.com:3306/messagetheblake", "messageRoot", "messageTheBRoot");
+            con = DriverManager.getConnection(x,x,x,x);
             statement = con.createStatement();
             ResultSet rs = statement.executeQuery("SELECT uid, username, email FROM register");
             while(rs.next()){

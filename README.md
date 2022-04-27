@@ -10,8 +10,4 @@ For the purposes of the demo, the expectation is for most of the data to be init
 
 Add description here...
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

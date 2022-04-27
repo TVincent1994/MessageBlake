@@ -38,15 +38,15 @@ public class EmailSendServlet extends HttpServlet {
         
         try{
             Properties props = new Properties();
-            props.setProperty("mail.host", "email-smtp.us-west-2.amazonaws.com");
+            props.setProperty("mail.host", "HOST ADDRESS");
             props.setProperty("mail.smtp.port", "587");
             props.setProperty("mail.smtp.auth", "true");
             props.setProperty("mail.smtp.starttls.enable", "true");
             
             // Recipient's e-mail id.
             
-            String pass = "Blake1994";
-            String gmail = "tvincent1322@gmail.com";
+            String pass = "xxxxxx";
+            String gmail = "xxxxxxxx@gmail.com";
             
             // Create a new session with an authenticator.
             // javax.mail.Session class provides "getInstance()" method to get the object of session by returning a new session.

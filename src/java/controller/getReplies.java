@@ -47,7 +47,7 @@ public class getReplies extends HttpServlet {
         
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://instancemtb.cbvlbcyf5pmu.us-west-2.rds.amazonaws.com:3306/messagetheblake", "messageRoot", "messageTheBRoot");
+            con = DriverManager.getConnection("x,x,x,x");
             Statement st = con.createStatement();
             //Query to get the number of rows in a table
             String sql = "SELECT count(*) FROM replies WHERE R_itemID = " + commentID;

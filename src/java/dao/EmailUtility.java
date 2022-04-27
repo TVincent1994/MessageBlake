@@ -28,9 +28,9 @@ public class EmailUtility {
         props.put("mail.smtp.auth", "true"); 
         props.put("mail.smtp.starttls.enable", "true");
         
-        final String from = "tvincent1322@gmail.com";    // Authenticate the MessageTheBlake email
-        final String email_pass = "Blake1994";             
-        final String fromName = "BLAKE";
+        final String from = "xxxxxxx";    // Authenticate the MessageTheBlake email
+        final String email_pass = "xxxxxxxx";             
+        final String fromName = "xxxxxx";
         
         Session session = Session.getDefaultInstance(props);
         
@@ -48,7 +48,7 @@ public class EmailUtility {
             // Setting the Subject and Content Type
             msg.setSubject("Forgot Password?");
            
-            transport.connect(host,"AKIA6QT7XQ6RJSWSGRHW","BN3OxQVUvF3g+dP8a+X15p2hWj5dFU97ymkd3rHPDE86");
+            transport.connect(host,"xxxxxxx","xxxxxxxxx");
             transport.sendMessage(msg, msg.getAllRecipients());
             System.out.println("Email Sent!");
             

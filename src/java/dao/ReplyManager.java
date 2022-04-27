@@ -31,7 +31,7 @@ public class ReplyManager {
         try{
             String sql = "SELECT * FROM replies WHERE R_ItemID = "+id+" ORDER BY R_date DESC, R_time DESC";
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://instancemtb.cbvlbcyf5pmu.us-west-2.rds.amazonaws.com:3306/messagetheblake", "messageRoot", "messageTheBRoot");
+            Connection con = DriverManager.getConnection("x,x,x,x");
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while(rs.next()){

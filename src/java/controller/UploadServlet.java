@@ -46,7 +46,7 @@ public class UploadServlet extends HttpServlet {
         
         // if file of folder doesn't exist, create a new foler
         // "savePath" is the location you want to input images into
-        String savePath = "C:\\Users\\Taylor Vincent\\Documents\\NetBeansProjects\\MessageTheBlake\\web" + File.separator + SAVE_DIR;
+        String savePath = "FILEPATH_FOR_IMAGES";
         System.out.println(savePath);   // output file path
         
         File file = new File(savePath);
@@ -85,7 +85,7 @@ public class UploadServlet extends HttpServlet {
         try{
             // connect to database
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://instancemtb.cbvlbcyf5pmu.us-west-2.rds.amazonaws.com:3306/messagetheblake", "messageRoot", "messageTheBRoot");
+            con = DriverManager.getConnection("x,x,x,x");
             PreparedStatement ps = con.prepareStatement("INSERT INTO photos (title, img_date, img_time, fileName, video, views) values(?, CURRENT_DATE, CURRENT_TIME, ?,?, 0)");            
             ps.setString(1, photoName);
             ps.setString(2, fileName);

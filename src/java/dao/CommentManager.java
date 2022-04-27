@@ -33,7 +33,7 @@ public class CommentManager {
         try{
             String sql = "SELECT * FROM comments WHERE C_itemID = " + id + " ORDER BY C_id DESC";
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://instancemtb.cbvlbcyf5pmu.us-west-2.rds.amazonaws.com:3306/messagetheblake", "messageRoot", "messageTheBRoot");
+            Connection con = DriverManager.getConnection("x,x,x,x");
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             

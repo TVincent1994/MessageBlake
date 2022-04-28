@@ -21,7 +21,7 @@
         Connection con;
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/messagetheblake", "root", "MessageTheB1994");
+            con = DriverManager.getConnection(x,x,x,x);
             Statement st = con.createStatement();
             // update the alert status so the user has read them. (1 = read, 0 = unread)
             String sql = "UPDATE comments SET C_alert='"+alert+"' WHERE C_itemID='"+imgID+"'";
@@ -37,7 +37,7 @@
         ResultSet rs;
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/messagetheblake", "root", "MessageTheB1994");
+            con = DriverManager.getConnection(x,x,x,x);
             Statement st = con.createStatement();
             // update the alert status so the user has read them. (1 = read, 0 = unread)
             String sql = "SELECT COUNT(*) FROM comments WHERE C_alert = 0 AND C_itemID='"+imgID+"'";

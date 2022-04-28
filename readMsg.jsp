@@ -13,7 +13,7 @@
         Connection con;
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/messagetheblake", "root", "MessageTheB1994");
+            con = DriverManager.getConnection(x,x,x,x);
             Statement st = con.createStatement();
             // update the message status so the user has read them. (1 = read, 0 = unread)
             String sql = "UPDATE messages SET message_status='"+status+"' WHERE sender_name='Blake' AND receiver_name='"+username+"' OR receiver_name='Blake' AND sender_name='"+username+"'";
@@ -29,7 +29,7 @@
             Connection con;
             ResultSet rs;
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/messagetheblake", "root", "MessageTheB1994");
+            con = DriverManager.getConnection(x,x,x,x);
             Statement st = con.createStatement();
             // update the message status so the user has read them. (1 = read, 0 = unread)
             rs = st.executeQuery("SELECT COUNT(*) FROM messages WHERE receiver_name='"+username+"' AND sender_name='Blake' AND message_status=0");

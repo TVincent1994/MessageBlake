@@ -17,7 +17,7 @@
     <a class="chatBoxButton" href="#">
         <i class="far fa-envelope"></i>
         
-            <sql:setDataSource var="myDB" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost/messagetheblake" user="root" password="MessageTheB1994" />
+            <sql:setDataSource var="myDB" driver="com.mysql.jdbc.Driver" url="xxxxxxxx" user="xxxxxxxx" password="xxxxxxxxxx" />
             
             <c:set var="Username" value="${username}"/> 
             

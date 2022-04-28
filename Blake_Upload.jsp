@@ -75,7 +75,7 @@
                 </form>
             </div>
             
-            <sql:setDataSource var="myDB" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost/messagetheblake" user="root" password="MessageTheB1994" />
+            <sql:setDataSource var="myDB" driver="com.mysql.jdbc.Driver" url="xxxxxxxxxxxx" user="xxxx" password="xxxxxxxx" />
             
             <div class="gallery">
                 <table id="photoTable" border="3px">
@@ -102,7 +102,7 @@
                                     ${imgDate}&nbsp;&nbsp;${imgTime}
                                 </div>
                                  
-                                <sql:setDataSource var="myDB" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost/messagetheblake" user="root" password="MessageTheB1994" />
+                                <sql:setDataSource var="myDB" driver="com.mysql.jdbc.Driver" url="xxxxxxxxxxxxx" user="xxxxxxxx" password="xxxxxxxxxx" />
             
                                 <c:set var="Username" value="<%=user%>"/>
                                 <c:set var="alert" value="${img.id}"/>

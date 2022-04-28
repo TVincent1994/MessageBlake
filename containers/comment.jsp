@@ -14,7 +14,7 @@
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <%@taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml" %>
 
-<sql:setDataSource var="myDB" driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost/messagetheblake" user="root" password="MessageTheB1994" />
+<sql:setDataSource var="myDB" driver="com.mysql.jdbc.Driver" url="xxxxxxxxxx" user="xxxxxxxxx" password="xxxxxxxx" />
 
 <div id="location">                                
     <c:forEach items="${commentList}" var="comment">

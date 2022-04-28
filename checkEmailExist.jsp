@@ -8,7 +8,7 @@
     try{
         String email=request.getParameter("emailInput");
         Class.forName("com.mysql.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost/messagetheblake", "root", "MessageTheB1994");
+        Connection con = DriverManager.getConnection(x,x,x,x);
         Statement st=con.createStatement();
         ResultSet rs = st.executeQuery("SELECT * FROM register WHERE email='" + email + "'");
         if(rs.next()){

@@ -1,0 +1,965 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+header{
+    padding: 5px 100px ;
+    box-sizing: border-box; 
+}
+
+#BlakeLogin h2{
+    text-decoration: none;
+    text-align:center; 
+    color:green; 
+    -webkit-text-stroke: 1px black; 
+}
+/* styling background image */
+#BlakeLogin { 
+    min-height: 380px; 
+    background-size: cover; 
+} 
+.BlakeContainer{
+    position: absolute;  
+    top: 50px; 
+    margin: 20px; 
+    max-width: 300px; 
+    padding: 16px; 
+    margin-left: 530px;
+    margin-top: 100px;
+}
+.ErrMessage{
+    padding: 3px;
+    color: red;
+    font-size: 24px;
+    text-align: center;
+}
+form{
+    display: block;
+    padding-top: 120px;        /* moves form down from top of image */
+}
+form input[type=submit]{    /* Send button for "new-message" pop up window */
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    background: green;
+    border: 1px solid #fff;
+    cursor: pointer;
+    /* Removes Default Form Style on Safari/ios buttons */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+form input[type=submit]:hover{
+    background: greenyellow;
+}
+
+input{
+    width:100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border: 1px solid gray;
+    font-size: 15px;
+    /* Removes Default Form Style on Safari/ios buttons */
+    -webkit-appearance: none;   
+    -moz-appearance: none;
+    appearance: none;
+}
+#BlakeUsername_ID{
+    margin-bottom: 5px;
+}
+#BlakePassword_ID{
+    margin-bottom: 20px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+nav{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    margin-top: 100px;
+    top: 0;
+}
+nav a{
+    text-decoration: none;
+    display:block;
+    padding: 30px 25px;
+    background-color: black;
+    text-align: center;
+    color:green;
+    margin: 10px;;
+    font-family:sans-serif;
+    font-size: 18px;
+}
+nav a:hover {
+    background-color: lime;
+    color:black;
+}
+
+
+/* The BlakeUsers page */
+#BlakeUsers h2{
+    text-decoration: none;
+    text-align:center; 
+}
+#BlakeUsers h2 a{
+    color:green; 
+    -webkit-text-stroke: 1px black;    /* takes out the underline of <h2> */
+}
+.List_Index{
+    text-align:center; 
+    margin:30px 0; 
+}
+#numOfRegisterdUsers{         /* Adjusting the number of users and words */
+    font-size: 30px;
+    text-align: center;
+    word-spacing: 5px;
+}
+#ListRegistered_Index{
+    position: absolute;
+    font-size: 24px;
+    color: green;
+    top: 50px;    
+    margin-left: 480px;
+    margin-top: 20px;
+}
+.table_setup, th, td{            /* Adjusting the table format */
+    border: 1px solid green;
+    text-align: center;
+    table-layout: fixed;
+    background-color: black;
+}
+th, td{                       /* The space between the text and box border */
+    padding: 20px;
+}
+.display_users{
+    justify-content: center;
+}
+.display_userEmail{
+    font-size: 16px;
+}
+
+/* The BlakeMessages page */
+#BlakeMessages h2{
+    text-decoration: none;
+    text-align:center; 
+}
+#BlakeMessages h2 a{
+    color:green; 
+    -webkit-text-stroke: 1px black;    /* takes out the underline of <h2> */
+}
+.userChat_Title{
+    font-size: 18px; 
+    text-decoration:underline;
+}
+.menu{
+    position: absolute;  
+    top:68px;
+    color: green;
+    width: 100%;
+    height: 100%;
+}
+#left-Col, #right-Col{
+    position: relative;
+    float: left;
+    height: 90%;        /* height of both columns */
+}
+#left-Col{     /* left column to display users */
+    width: 30%;
+}
+#right-Col{     /* right column to display the conversation */
+    width: 70%; 
+    border:1px solid green;
+    background-color: black;
+}
+#left-col-container{   /* The user container */
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    overflow: auto;      /* If lots of users register, add scroll down. */
+} 
+#right-col-container{
+    width: 100%;
+    height: 82%;         /* set the height between */
+    margin: 0px auto;
+    overflow: auto;      /* If lots of users register, add scroll down. */
+}
+div p.userDisplay{
+    font-size: 18px;
+    font-family: DejaVu Sans Mono, monospace;     /* change text style */
+    color: black;
+    margin-left: 2px;
+}
+div p.onlineStatus{
+    font-size: 18px;
+    font-family: Trebuchet MS;
+    margin-left: 50%;         /* move from left  */
+    color: red;
+}
+a {                            /* Get rid of all text-decorations or underlines for links */
+    text-decoration: none;
+}
+.userContactBtn{        /* The border/background of user container */
+    border: 1px solid black;
+    display: flex;
+    padding: 5px;
+    background: #00FF00; /* lime color */
+    margin: 0px auto;
+    margin-top: 2px;
+    overflow: auto;
+    text-decoration: none;
+    cursor: pointer;
+}
+.userContactBtn:hover{
+    background: #00FF7F;   /* springgreen color */
+}
+
+/*.user_image{        IF USERS WERE TO ADD PROFILE PICS, NOT SURE TO USE IT YET!!!!!!!!
+    float:left; 
+    margin-right:5px; 
+    width:50px; 
+    height:50px;
+}*/
+#adminMessageContainer{
+    height:100%;          /* Been changing this to get the right height for displaying messages */
+    /*overflow: auto;    commenting "overflow" helped prevent the scroll bar from automatically scrolling back to top when refreshing div element */
+}
+.adminTxtArea{            /* text area to send messages to users */
+    font-size: 18px;
+    width:100%;           /* recently changed the width from 99% to 100% */
+    height: 11%;          /* text area perfectly fits within the box */
+    position: absolute;
+    bottom: 35px;
+    margin: 0px auto;
+    
+}
+#submitAdminMsg{
+    border-radius: 0px;
+    width:100%;             /* recently changed the width from 99% to 100% */
+    color: white;
+    background-color: green;
+    position: absolute;
+    bottom: 1px;
+    margin: 0px auto;
+    cursor: pointer;
+}
+#submitAdminMsg:hover{
+    background-color: lime;
+}
+
+.users-message, .blakes-message{
+    border:1px solid green;
+    width: 96%;
+    padding: 5px;
+    margin: 0px auto;
+    margin-top: 2px;
+    overflow: auto;
+}
+.users-message{
+    background: #00FF00; /* lime color */ 
+    position: relative;
+}
+.message-content{
+    max-width: 100%;
+    position: relative;
+}
+.msgTxt{
+    word-wrap: break-word;   /* prevents text from overflowing in the div to automatically newline insted of being hidden or making a scrollbar */
+    margin: 0;
+}
+.msgDate{
+    text-align: right;
+    margin: 0;
+}
+.msgTime{
+    text-align: right;
+    margin: 0;
+}
+
+.closebtn{             /* x (close button) in "new-message" window pop up */
+    position: absolute;
+    bottom: 224px;
+    left: 460px;
+    font-size: 60px;
+    cursor: pointer;
+    color: red;
+}
+.closebtn:hover{
+    color:#ccc;
+}
+
+
+#new-message{
+    display: none;      /* Hide window until you click button to activate/show it */
+    box-shadow: 2px 10px 30px #000000;
+    width:500px;
+    position: fixed;
+    top: 10%;
+    background: white;
+    z-index: 2;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 5px;
+    overflow: auto;
+}
+.message-header, .message-footer{
+    background: green;
+    margin: 0px;
+    color: white;
+    padding: 5px;
+}
+.message-header{
+    font-size: 20px;
+    text-align: center;
+}
+.message-body{
+    padding: 5px;
+}
+.message-input{
+    width:96%;
+}
+.textarea-input{
+    width: 96%;
+}
+.adminSendMessageErr{
+    position: absolute;
+    padding: 5px;
+    color: red;
+}
+
+/* The Blake_Upload page */
+#Blake_Upload h2{
+    text-decoration: none;
+    text-align:center; 
+}
+#Blake_Upload h2 a{
+    color:green; 
+    -webkit-text-stroke: 1px black;    /* takes out the underline of <h2> */
+}
+.uploadContainer{
+    position: absolute;
+    color: green;
+    top: 50px;    /* Sets the form table to start from the top when the position is set to "absolute" */
+    margin-left: 390px;
+    margin-top: 10px;
+}
+.uploadTable{
+    font-size: 16px;
+    width:580px;
+    border: 3px solid green;
+    table-layout: fixed;
+    background-color: black;
+}
+.uploadTable tr, td{ 
+    padding: 20px;
+}
+#fileButton{
+    cursor: pointer;
+}
+.photoTitle{
+    position: absolute;
+    font-size: 24px;
+    top: 750px;
+    color: green;
+    font-family: Monaco;
+    margin-left: 460px;
+}
+#commentAlert{
+    padding: 1px 2px 1px 1px;
+    text-align: center;
+    font-size: 1em;
+    color: white;
+    background: red;
+    border-radius: 10%;
+}
+.gallery{
+    margin: 0;
+    width: 100%;
+}
+#photoTable{
+    width: 100%;
+    padding: 5px;
+    color:limegreen;
+}
+.photoContent{
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+}
+.uploadedImage{
+    cursor: pointer;
+    width: 200px;
+    height: 180px;
+}
+.goBackGallery{
+    text-align: center;
+}
+.details{
+    color: lime;
+    font-size: 16px;
+}
+.details:hover{
+    color:red;
+}
+.detailsTitleCnter{
+    
+}
+.detailsTitle{
+    text-align: center;
+    color: green;
+}
+.errComment{
+    text-align: center;
+}
+#sendCommentErr{
+    color: red;
+}
+.openCommentWrapper{
+    padding: 5px;
+    text-align: center;
+}
+#openSendComment{
+    font-weight: bold;
+    color: lime;
+    cursor: pointer;
+}
+#openSendComment:hover{
+    color: greenyellow;
+}
+#sendCommentForm{
+    padding: 10px;
+}
+#commentTxtField{
+    text-align: center;
+}
+#sendComment{
+    height: 50px;
+    width: 400px;
+    font-size: 16px;
+}
+#SendButtonWrapper{
+    text-align: center;
+}
+#SendButton{
+    padding: 2px;
+    width: 80px;
+    text-align: center;
+    background-color: green;
+    border: 2px solid darkslategrey;
+    color: white;
+    cursor: pointer;
+}
+#SendButton:hover{
+    background-color: lime;
+}
+.commentContainer{     /* comments container to ad comments to the pictures */
+    margin: auto;
+    padding-top: 20px;
+    position: relative;
+    max-width: 700px;
+    width: 80%;
+    height: 300px;
+}
+#comments{
+    margin-top: 5px;
+    padding: 0;
+}
+.comments_field{
+    margin: 0;
+    padding: 0;
+}
+.comment_box{
+    width: 700px;
+    padding: 10px;
+    margin-bottom: 4px;
+    border: 2px solid green;
+}
+.comment-content{
+    position: relative;
+    font-family: Gill Sans, sans-serif;
+    word-wrap: break-word;     /* prevents text in a div block from overflowing. If so, newline is automatically triggered */
+    line-height: 1.20rem; 
+    margin: 5px;
+}
+.comment-User {
+    position: relative;
+    margin: 0;
+    font-size: 16px;
+    color: green;
+}
+.comment-txt{
+    margin-top: 5px;
+    color: white;
+}
+.comment-Date{
+    margin-bottom: 0;
+    color: green;
+}
+.c_delete{
+    position: absolute;
+    text-decoration: none;
+    font-size: 32px;
+    bottom: 10px;
+    right: 10px;
+    color: red;
+    cursor:pointer;
+}
+.c_delete:hover{
+    color: orange;
+}
+#popup-overlay{         /* Pop up modal window for deleting comments */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+#deleteCommWindow{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 300px;
+    z-index: 2;
+    box-shadow: 5px 5px 3px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+}
+.deleteTitle{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0px;
+}
+.deleteWindowControls{
+    text-align: center;
+    padding: 20px 20px;
+}
+.deleteCommBtn{
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 8px 18px 8px 18px;
+    margin: 15px;
+    background: green;
+    color: white;
+    cursor: pointer;
+}
+.closeCommBtn{
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 8px 18px 8px 18px;
+    margin: 15px;
+    background: green;
+    color: white;
+    cursor: pointer;
+}
+.deleteCommBtn:hover{
+    background: lime;
+}
+.closeCommBtn:hover{
+    background: lime;
+}
+.replyBtn{
+    position: absolute;
+    text-decoration: none;
+    top: 0px;
+    right: 10px;
+    border: 2px solid darkslategrey;
+    background-color: green;
+    color: white;
+    cursor:pointer;
+}
+.replyBtn:hover{
+    background-color:limegreen;
+}
+.replyRow{
+    margin-top: 0px;
+}
+.replyText{
+    width: 80%;
+    height: 80px;
+    font-size: 18px;
+}
+.replyButtons{
+    margin-top: 5px;
+}
+#a_replyErrMsg{
+    color: red;
+}
+.closeReplyBtn{
+    cursor: pointer;
+    color: white;
+    background-color:green;
+    border-color: black;
+    margin-right: 60px;
+}
+.submitReply{
+    cursor: pointer;
+    color: white;
+    background-color:green;
+    border-color: black;
+    margin-left: 60px;
+}
+.closeReplyBtn:hover{
+    background-color:limegreen;
+}
+.submitReply:hover{
+    background-color:limegreen;
+}
+#replyErrMsg{
+    font-weight: bold;
+    color: red;
+}
+a#repliesBtnID{
+    font-weight: bold;
+    text-decoration: none;
+    color: lime;
+    cursor: pointer;
+}
+.replies{
+    margin-top: 2px;
+    width: 100%;
+}
+.reply_box{
+    width: 100%;
+    padding: 3px;
+    margin-bottom: 4px;
+    background-color: limegreen;
+    border-radius: 2px;
+}
+.reply-content{
+    position: relative;
+    background-color: #00120C;
+    padding: 5px 5px 5px 5px;
+    width: 100%;
+    word-wrap: break-word;     /* prevents text in a div block from overflowing. If so, newline is automatically triggered */
+    color: lime;
+}
+.reply-user{
+    position: relative;
+    margin: 0;
+    font-size: 16px;
+}
+.reply-txt{
+    margin-top: 5px;
+}
+.reply-date{
+    margin-bottom: 0;
+}
+
+/* Modal Content (The actual image)  */
+.uploaded_pic_modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 40px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+.modal-imgContent {
+  margin: auto;
+  display: block;
+  width: 80%;
+  height: 90%;
+  max-width: 700px;
+  max-height: 900px;
+}
+/* Caption of Modal Image */
+#imgCaption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 50px;
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+
+
+
+
+/* MEDIA SIZES */
+@media screen and (max-width: 425px){  /* Take away the nav bar when mobile size */
+    #BlakeLogin h2{
+        text-align:center; 
+        -webkit-text-stroke: 1px black; 
+    }
+    #BlakeLogin { 
+        min-height: 380px; 
+    } 
+    .BlakeContainer{
+        top: 0px; 
+        margin-left: 15%;
+    }
+    .table_setup{
+        overflow-x: auto;
+    }
+    th, td{
+        width: 14px;
+        padding: 10px;
+    }
+    tbody{
+        padding: 5px;
+    }
+    
+    #ListRegistered_Index{
+        margin-left: 0px;
+    }
+    .display_users{
+        font-size: 16px;
+    }
+    .display_userEmail{
+        padding: 10px;
+        font-size: 16px;
+    }
+    .adminTxtArea{
+        height: 10%;
+    }
+    .uploadContainer{
+        top: 80px;
+        margin: 0;
+    }
+    form.uploader{
+        padding-top: 8px;
+    }
+    .uploadTable{
+        width: 400px;
+        margin-left: 14px;
+    }
+    #commentAlert{
+        padding: 1px 3px 1px 1.4px;
+        font-size: .8em;
+    }
+    .gallery{
+        width: 100%;
+        overflow-x: auto;
+    }
+    #photoTable{
+        margin-top: 100px;
+    }
+    .uploadedImage{
+        width: 130px;
+        height: 150px;
+    }
+    .photoContent{
+        width: 128px;        /* set width to contain the photo content (text))*/
+        white-space: nowrap; /* enables sequences of whitespace to collapse into a single whitespace. Text will never wrap to next line. Continues to same line */
+        overflow: hidden;    /* controls what happens to content that's flowing out of its container. hidden hides the rest of the text. */
+        text-overflow: ellipsis;  /* displays the 3 dots (...) */
+        font-size: 10px;
+    }
+    .pcDate{
+        font-size: 10px;
+    }
+    .close{
+        right: 30px;
+        top: 2px;
+    }
+    .modal-imgContent{
+        margin-top: 5px;
+        width: 425px;
+    }
+    .commentContainer{
+        padding: 2px;
+        width: 100%;
+    }
+    .comment_box{
+        width: 100%;
+    }
+    div p.userDisplay{
+        margin-left: 0px;
+    }
+ 
+}
+@media screen and (max-width: 414px){  /* Take away the nav bar when mobile size */
+    #right-col-container{
+        height: 80%;
+    }
+    .uploadTable{
+        margin-left: 7px;
+    }
+    .modal-imgContent{
+        width: 414px;
+    }
+    
+}
+@media screen and (max-width: 375px){  /* Take away the nav bar when mobile size */
+    .userChat_Title{
+        font-size: 16px; 
+        
+    }
+    #ListRegistered_Index{
+        margin-left: 0px;
+    }
+    .table_setup{
+    }
+    .display_users{
+        font-size: 16px;
+        
+    }
+    .display_userEmail{
+        font-size: 16px;
+    }
+    .adminSendMessageErr{
+        font-size: 14px;
+    }
+    .adminTxtArea{
+        height: 8%;
+    }
+    #right-col-container{
+        height: 82%;
+    }
+    input#submitAdminMsg{
+        padding: 8px;
+    }
+    .userChatTitle{
+        font-size: 16px;
+    }
+    .uploadContainer{
+        top: 70px;
+    }
+    #photoTable{
+        margin-top: 120px;
+    }
+    .uploadTable{
+        width: 360px;
+        margin-left: 7px;
+    }
+    .modal-imgContent{
+        width: 370px;
+        height: 90%;
+    }
+    
+}
+@media screen and (max-width: 360px){  /* Take away the nav bar when mobile size */
+    
+    #ListRegistered_Index{
+        margin-left: 0px;
+    }
+    .table_setup{
+    }
+    .display_users{
+        font-size: 16px;
+    }
+    .display_userEmail{
+        font-size: 16px;
+    }
+    .adminTxtArea{
+        height: 8%;
+    }
+    .adminSendMessageErr{
+        font-size: 14px;
+        padding: 3px;
+    }
+    #right-col-container{
+        height: 81%;
+    }
+    input#submitAdminMsg{
+        padding: 8px;
+    }
+    .uploadContainer{
+        top: 70px;
+    }
+    .uploadTable tr, td{
+        padding: 4px;
+    }
+    .uploadTable{
+        width: 350px;
+        margin-left: 5px;
+    }
+    #photoTable{
+        margin-top: 65px;
+    }
+    .uploadedImage{
+        width: 130px;
+        height: 120px;
+    }
+    .modal-imgContent{
+        width: 355px;
+        height: 90%;
+    }
+}
+@media screen and (max-width: 320px){  /* Take away the nav bar when mobile size */
+    
+    #ListRegistered_Index{
+        margin-left: 0px;
+    }
+    form.uploader{
+        padding-top: 20px;
+    }
+    .table_setup{
+    }
+    .display_users{
+        font-size: 12px;
+    }
+    .display_userEmail{
+        font-size: 12px;
+    }
+    .adminSendMessageErr{
+        font-size: 12px;
+    }
+    
+    #commentAlert{
+        padding: 1px 3px .8px 1px;
+    }
+    .adminTxtArea{
+        height: 10%;
+    }
+    .uploadContainer{
+        top: 50px;
+    }
+    .uploadTable tr, td{
+        padding: 4px;
+    }
+    .uploadTable{
+        width: 306px;
+        margin-left: 7px;
+    }
+    #photoTable{
+        margin-top: 80px;
+    }
+    .fileButton{
+        padding: 10px;
+    }
+    .modal-imgContent{
+        width: 315px;
+        height: 90%;
+    }
+    .uploadedImage{
+        width: 100px;
+        height: 100px;
+    }
+}

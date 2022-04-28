@@ -14,7 +14,7 @@
 <%
     try{
         Class.forName("com.mysql.jdbc.Driver");
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost/messagetheblake", "root", "MessageTheB1994");
+        Connection con = DriverManager.getConnection("xxxxxxxxx", "xxxxxxxx", "xxxxxxxxxxx");
         PreparedStatement ps = con.prepareStatement("Select * FROM photos ORDER BY img_date DESC, img_time DESC");
         ResultSet rs = ps.executeQuery();
 

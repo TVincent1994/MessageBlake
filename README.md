@@ -6,4 +6,6 @@ My personal website - built in Java, Javascript, JQuery, AJAX, HTML, CSS, and ho
 
 ![](Website_Img/Website.PNG)
 
+Gallery page.
+
 ![](Website_Img/Gallery_Img.PNG)

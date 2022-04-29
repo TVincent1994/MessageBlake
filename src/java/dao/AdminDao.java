@@ -28,19 +28,19 @@ public class AdminDao {
         
         try{
             con = DBConnection.createConnetion(); // establish connection
-            ps = con.prepareStatement("SELECT * FROM blake WHERE admin_name=? AND admin_password=?");
+            ps = con.prepareStatement("SELECT * FROM xxxxxxx WHERE admin_username=? AND admin_pass=?");
             ps.setString(1, username);
             ps.setString(2, password);
             resultset = ps.executeQuery();
         
             while(resultset.next()){   
                 //fetch the values present in database
-                usernameDB = resultset.getString("admin_name");
-                passwordDB = resultset.getString("admin_password");
+                usernameDB = resultset.getString("admin_username");
+                passwordDB = resultset.getString("admin_pass");
                 
                 if(username.equals(usernameDB) && password.equals(passwordDB)){
                     // Blake logins successful
-                    return "BLAKE_SUCCESS";
+                    return "SUCCESS";
                 }else{
                     // If the entered fields don't match, credentials like username doesn't exist in database
                     return "FAILED";
